@@ -44,17 +44,17 @@ const MainTitle = styled.p`
   color: #475467;
 `;
 
-const RedProfile = styled(ActiveProfile)`
+const ProfileA = styled(ActiveProfile)`
   outline: none;
   border: none;
 `;
 
-const GreenProfile = styled(ActiveProfile)`
+const ProfileB = styled(ActiveProfile)`
   outline: none;
   border: none;
 `;
 
-const BlueProfile = styled(ActiveProfile)`
+const AddProfile = styled(ActiveProfile)`
   outline: none;
   border: none;
 `;
@@ -74,19 +74,19 @@ const Sidebar = () => {
       <ActiveProfile>
         <MainTitle>OR</MainTitle>
       </ActiveProfile>
-      <RedProfile
+      <ProfileA
         theme={{
           activeProfileStyles: "margin-top: 20px; margin-bottom: 20px;",
         }}
       >
         <MainTitle>BR</MainTitle>
-      </RedProfile>
-      <GreenProfile theme={{ activeProfileStyles: "margin-bottom: 20px;" }}>
+      </ProfileA>
+      <ProfileB theme={{ activeProfileStyles: "margin-bottom: 20px;" }}>
         <MainTitle>CR</MainTitle>
-      </GreenProfile>
-      <BlueProfile>
+      </ProfileB>
+      <AddProfile>
         <AddIcon>+</AddIcon>
-      </BlueProfile>
+      </AddProfile>
     </SidebarContainer>
   );
 };
