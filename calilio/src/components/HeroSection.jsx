@@ -15,6 +15,8 @@ import Contacts from "../Images/Contacts.svg";
 import setting from "../Images/setting.svg";
 import sms from "../Images/sms.svg";
 import Phone from "../Images/chat.svg";
+import activeprofile from "../activeprofie.svg";
+
 import { ChevronDownIcon, AddIcon } from "@chakra-ui/icons";
 
 const StyledFlex = styled(Flex)`
@@ -138,6 +140,7 @@ function HeroSection() {
           <AddIcon w="15px" backgroundColor="white" />
         </Flex>
       </Box>
+      <Image src={activeprofile} />
     </StyledBox>
   );
 }
