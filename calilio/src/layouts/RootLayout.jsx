@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar";
 
 const RootLayout = () => {
   return (
-    <Flex w="100%" gap={5}>
+    <Flex w="100%" gap={4}>
       <Box w="60px">
         <ProfileBar />
       </Box>

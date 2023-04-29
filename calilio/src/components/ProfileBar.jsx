@@ -6,8 +6,8 @@ import logo from "../Images/lg.svg";
 const Circle = styled(Box)`
   background: #d6d9ff;
   border-radius: 50%;
-  width: 37px;
-  height: 37px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,14 +34,14 @@ const ProfileBar = () => {
       flexDirection="column"
       alignItems="center"
       padding="24px 0px 0px"
-      gap={4}
+      gap={5}
       bg="#5964ff"
       w="50px"
-      h="400px"
-      mt="-8px"
+      h="100vh"
+      mt="8px"
       ml="13px"
     >
-      <Image src={logo} boxSize={10} mt="10px" mb="10px" />
+      <Image src={logo} boxSize={10} mt="10px" mb="10px" bg="#5964ff" />
       <Circle>
         <MainTitle>OR</MainTitle>
       </Circle>
@@ -52,7 +52,7 @@ const ProfileBar = () => {
         <MainTitle>CR</MainTitle>
       </Circle>
       <Circle>
-        <AddIcon boxSize={4} bg=" #d6d9ff" color="#5964ff" />
+        <AddIcon boxSize={5} bg=" #d6d9ff" color="#5964ff" />
       </Circle>
     </Flex>
   );
