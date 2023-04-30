@@ -18,8 +18,8 @@ function Setting() {
   return (
     <>
       <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-        <StyledImage src={setting} bg={"white"} />
         <StyledText>Settings</StyledText>
+        <StyledImage src={setting} bg={"white"} />
       </Flex>
     </>
   );
