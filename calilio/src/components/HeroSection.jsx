@@ -112,7 +112,7 @@ function HeroSection() {
           <ListItem>
             <StyledFlex>
               <Image src={setting} background={"white"} />
-              <StyledLink to="/setting">Setting</StyledLink>
+              <StyledLink to="/setting">Settings</StyledLink>
             </StyledFlex>
           </ListItem>
 
