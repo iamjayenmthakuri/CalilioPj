@@ -5,6 +5,7 @@ import {
   Image,
   Button,
   Heading,
+  Grid,
 } from "@chakra-ui/react";
 import styled from "styled-components";
 import contact from "../Images/contact.svg";
@@ -39,7 +40,6 @@ function Contact() {
       </Flex>
       <Flex
         backgroundColor={"white"}
-        height={"170vh"}
         alignItems="center"
         justifyContent="center"
       >
@@ -50,31 +50,38 @@ function Contact() {
           placeItems={"center"}
           gap={4}
         >
-          <Image src={contactIcon} boxSize={134} background={"White"} />
-          <Heading as={"Heading"} background={"White"} fontSize={18}>
-            No Contacts
-          </Heading>
-          <Flex
-            gap={-2}
-            flexDirection={"column"}
-            alignItems={"center"}
+          <Grid
+            placeItems={"center"}
+            marginTop={"170px"}
             backgroundColor={"white"}
+            gap={2}
           >
-            <Text bg={"white"} fontSize={14}>
-              No existing contacts. Add contacts to start conversation
-            </Text>
-            <Text bg={"whiteAlpha.900"}>
-              or
-              <Text fontSize={14} as={"span"} bg={"white"} color={"#5964FF"}>
-                upload
+            <Image src={contactIcon} boxSize={134} background={"White"} />
+            <Heading as={"Heading"} background={"White"} fontSize={18}>
+              No Contacts
+            </Heading>
+            <Flex
+              gap={-2}
+              flexDirection={"column"}
+              alignItems={"center"}
+              backgroundColor={"white"}
+            >
+              <Text bg={"white"} fontSize={14}>
+                No existing contacts. Add contacts to start conversation
               </Text>
-              a CSV file.
-            </Text>
-          </Flex>
-          <StyledButton color={"white"} gap={2} bg={"#5964FF"} fontSize={14}>
-            <StyledImage src={userPlus} />
-            Add new Contact
-          </StyledButton>
+              <Text bg={"whiteAlpha.900"}>
+                or
+                <Text fontSize={14} as={"span"} bg={"white"} color={"#5964FF"}>
+                  upload
+                </Text>
+                a CSV file.
+              </Text>
+            </Flex>
+            <StyledButton color={"white"} gap={2} bg={"#5964FF"} fontSize={14}>
+              <StyledImage src={userPlus} />
+              Add new Contact
+            </StyledButton>
+          </Grid>
         </Container>
       </Flex>
     </>

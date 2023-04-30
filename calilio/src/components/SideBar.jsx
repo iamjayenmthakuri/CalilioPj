@@ -7,13 +7,17 @@ const Sidebar = () => {
     <SimpleGrid>
       <Box
         mt="10px"
-        w="280px"
+        w={{ base: "50px", sm: "180px", md: "280px" }}
         h="64px"
         borderRadius="5px"
         bg="white"
         boxShadow="0px 1px 0px rgba(0, 0, 0, 0.25), inset -1px 0px 0px rgba(0, 0, 0, 0.25)"
         display="flex"
-        justifyContent="space-between"
+        justifyContent={{
+          base: "flex-start",
+          sm: "flex-start",
+          md: "space-between",
+        }}
         alignItems="center"
         flexDirection="row"
         px="16px"
@@ -21,7 +25,7 @@ const Sidebar = () => {
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <Text
             fontWeight="700"
-            fontSize="20px"
+            fontSize={{ base: "10px", md: "15px", lg: "20px" }}
             lineHeight="30px"
             color="#344054"
             bg="white"
