@@ -84,6 +84,15 @@ const Wrapper = styled(Flex)`
   }
 `;
 
+const StyledImage = styled(Image)`
+  background-color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #d8d7d7;
+    color: #000000;
+  }
+`;
+
 function HeroSection() {
   const isHideModeEnabaled = useRecoilValue(hideModeState);
   const isSecondHideModeEnabaled = useRecoilValue(secondHideState);
@@ -245,9 +254,9 @@ function HeroSection() {
           Olivia Maidye....
         </Text>
         <Flex justifyContent={"space-around"} gap={2} backgroundColor={"white"}>
-          <Image src={Mic} boxSize={5} backgroundColor="white" />
-          <Image src={Headphone} boxSize={5} backgroundColor="white" />
-          <Image src={setting} boxSize={5} backgroundColor="white" />
+          <StyledImage src={Mic} boxSize={5} />
+          <StyledImage src={Headphone} boxSize={5} />
+          <StyledImage src={setting} boxSize={5} />
         </Flex>
       </StyledFlexed>
     </Flex>
