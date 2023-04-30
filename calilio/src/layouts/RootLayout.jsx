@@ -5,14 +5,19 @@ import Sidebar from "../components/Sidebar";
 
 const RootLayout = () => {
   return (
-    <Flex w="100%" gap={4}>
+    <Flex w="100%" gap={2}>
       <Box w="60px">
         <ProfileBar />
       </Box>
       <Box w="290px">
         <Sidebar />
       </Box>
-      <Box flexGrow="1">
+      <Box
+        flexGrow="1"
+        backgroundColor={"white"}
+        margin={"8px"}
+        borderRadius={"8px"}
+      >
         <Outlet />
       </Box>
     </Flex>
