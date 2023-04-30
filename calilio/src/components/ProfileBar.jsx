@@ -20,8 +20,8 @@ const Circle = styled(Box)`
 const MainTitle = styled(Text)`
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
-  font-size: 11px;
+  font-weight: 900;
+  font-size: 14.5px;
   line-height: 24px;
   text-align: center;
   color: #475467;
@@ -52,7 +52,7 @@ const ProfileBar = () => {
         <MainTitle>CR</MainTitle>
       </Circle>
       <Circle>
-        <AddIcon boxSize={5} bg=" #d6d9ff" color="#5964ff" />
+        <AddIcon boxSize={4} bg=" #d6d9ff" color="#5964ff" />
       </Circle>
     </Flex>
   );
