@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react/no-unescaped-entities */
 import {
   Box,
@@ -16,6 +17,8 @@ import setting from "../Images/setting.svg";
 import sms from "../Images/sms.svg";
 import Phone from "../Images/chat.svg";
 import activeprofile from "../Images/activeprofile.svg";
+import Mic from "../Images/mic.svg";
+import Headphone from "../Images/headphone.svg";
 import { ChevronDownIcon, AddIcon } from "@chakra-ui/icons";
 import {
   toggleHideModeState,
@@ -65,12 +68,10 @@ const StyledIcon = styled(ChevronDownIcon)`
     transform: rotate(180deg);
   }
 `;
-const Wrapper = styled.div`
-  display: "flex";
+const Wrapper = styled(Flex)`
   background-color: white;
-  justify-content: center;
-
-  align-items: "center";
+  padding: 2px;
+  margin: 0;
   &:active ${StyledIcon} {
     transform: rotate(180deg);
   }
@@ -134,15 +135,18 @@ function HeroSection() {
         >
           <Wrapper>
             <StyledIcon
-              w="18px"
+              w="29px"
+              ml={"-19px"}
+              mt="4px"
               backgroundColor="white"
               onClick={toggleHideMode}
             />
             <Text
+              cursor={"pointer"}
               w="200px"
               backgroundColor="white"
               fontWeight="600"
-              pl="2px"
+              ml="2px"
               onClick={toggleHideMode}
             >
               Numbers
@@ -190,15 +194,18 @@ function HeroSection() {
           backgroundColor="white"
           marginTop="26px"
         >
-          {" "}
           <Wrapper>
             <StyledIcon
-              w="18px"
+              w="29px"
+              mt="4px"
+              ml={"-19px"}
               backgroundColor="white"
               onClick={toggleSecondHideMode}
             />
             <Text
+              as="div"
               w="200px"
+              cursor={"pointer"}
               backgroundColor="white"
               fontWeight="600"
               pl="2px"
@@ -210,6 +217,7 @@ function HeroSection() {
           <AddIcon w="15px" backgroundColor="white" />
         </Flex>
       </Box>
+
       {isSecondHideModeEnabaled ? (
         <Flex
           gap="10px"
@@ -223,6 +231,29 @@ function HeroSection() {
           </Text>
         </Flex>
       ) : null}
+
+      <Flex
+        gap={2}
+        alignItems={"center"}
+        backgroundColor={"white"}
+        marginTop={"610px"}
+        marginLeft={"-5px"}
+      >
+        <Image src={activeprofile} backgroundColor="white" />
+        <Text
+          width={"170px"}
+          fontWeight="700"
+          backgroundColor="white"
+          fontSize="14px"
+        >
+          Olivia Maidye....
+        </Text>
+        <Flex justifyContent={"space-around"} gap={2} backgroundColor={"white"}>
+          <Image src={Mic} boxSize={5} backgroundColor="white" />
+          <Image src={Headphone} boxSize={5} backgroundColor="white" />
+          <Image src={setting} boxSize={5} backgroundColor="white" />
+        </Flex>
+      </Flex>
     </StyledBox>
   );
 }
