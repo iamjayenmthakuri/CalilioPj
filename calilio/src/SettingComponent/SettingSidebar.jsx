@@ -9,11 +9,16 @@ import {
 } from "@chakra-ui/react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Dashboard from "../Images/dashbord.svg";
+import overview from "../Images/dashbord.svg";
 import Setting from "../Images/setting.svg";
-import sms from "../Images/sms.svg";
-import Contacts from "../Images/contacts.svg";
-import userPlus from "../Images/userplus.svg";
+import blocklist from "../Images/blocklist.svg";
+import mynumber from "../Images/mynumber.svg";
+import audio from "../Images/headphone.svg";
+import notification from "../Images/notification.svg";
+import payment from "../Images/payment.svg";
+import subscription from "../Images/subscription.svg";
+import member from "../Images/member.svg";
+import myaccount from "../Images/myaccount.svg";
 
 const StyledText = styled(Text)`
   font-style: normal;
@@ -89,7 +94,7 @@ const SettingSidebar = () => {
             justifyContent={"left"}
           >
             <StyledButton color={"white"} gap={2} bg={"#5964FF"} fontSize={18}>
-              <StyledImage src={userPlus} />
+              <StyledImage src={myaccount} />
               My Account
             </StyledButton>
           </Flex>
@@ -100,28 +105,28 @@ const SettingSidebar = () => {
           </Text>
           <ListItem>
             <StyledFlex>
-              <Image src={Dashboard} background={"white"} />
+              <Image src={overview} background={"white"} />
               <StyledLink to="overview">overview</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={Contacts} background={"white"} />
+              <Image src={mynumber} background={"white"} />
               <StyledLink to="mynumber">My Number</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={Setting} background={"white"} />
+              <Image src={member} background={"white"} />
               <StyledLink to="member">Member</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={sms} background={"white"} />
+              <Image src={blocklist} background={"white"} />
               <StyledLink to="blocklist">Block List</StyledLink>
             </StyledFlex>
           </ListItem>
@@ -132,15 +137,15 @@ const SettingSidebar = () => {
           </Text>
           <ListItem>
             <StyledFlex>
-              <Image src={Dashboard} background={"white"} />
-              <StyledLink to="overview">Subscription</StyledLink>
+              <Image src={subscription} background={"white"} />
+              <StyledLink to="subscription">Subscription</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={Contacts} background={"white"} />
-              <StyledLink to="mynumber">Payment method</StyledLink>
+              <Image src={payment} background={"white"} />
+              <StyledLink to="payment">Payment method</StyledLink>
             </StyledFlex>
           </ListItem>
         </List>
@@ -150,15 +155,15 @@ const SettingSidebar = () => {
           </Text>
           <ListItem>
             <StyledFlex>
-              <Image src={Dashboard} background={"white"} />
-              <StyledLink to="overview">Audio</StyledLink>
+              <Image src={audio} background={"white"} />
+              <StyledLink to="audio">Audio</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={Contacts} background={"white"} />
-              <StyledLink to="mynumber">Notification</StyledLink>
+              <Image src={notification} background={"white"} />
+              <StyledLink to="notification">Notification</StyledLink>
             </StyledFlex>
           </ListItem>
         </List>
