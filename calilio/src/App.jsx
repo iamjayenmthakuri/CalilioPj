@@ -5,11 +5,15 @@ import Dashbord from "./pages/Dashbord";
 
 import Contact from "./pages/Contact";
 import Bulksms from "./pages/Bulksms";
-import Overview from "./SettingComponent/Overview";
+import Overview from "./SettingComponent/Workspaces/Overview";
 import SettingSidebarLayout from "./layouts/SettingSidebarLayout";
-import Mynumber from "./SettingComponent/Mynumber";
-import Blocklist from "./SettingComponent/Blocklist";
-import Member from "./SettingComponent/Member";
+import Mynumber from "./SettingComponent/Workspaces/Mynumber";
+import Blocklist from "./SettingComponent/Workspaces/Blocklist";
+import Member from "./SettingComponent/Workspaces/Member";
+import Subscription from "./SettingComponent/Biling/Subscription";
+import PaymentMethod from "./SettingComponent/Biling/paymentMethod";
+import Audio from "./SettingComponent/Application Setting/Audio";
+import Notification from "./SettingComponent/Application Setting/Notification";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
             <Route path="mynumber" element={<Mynumber />} />
             <Route path="blocklist" element={<Blocklist />} />
             <Route path="member" element={<Member />} />
+            <Route path="subscription" element={<Subscription />} />
+            <Route path="payment" element={<PaymentMethod />} />
+            <Route path="audio" element={<Audio />} />
+            <Route path="notification" element={<Notification />} />
           </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="bulksms" element={<Bulksms />} />

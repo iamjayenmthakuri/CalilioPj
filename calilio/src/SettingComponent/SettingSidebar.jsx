@@ -32,11 +32,17 @@ const StyledText = styled(Text)`
 const StyledImage = styled(Image)`
   size-adjust: 10px;
 `;
+const StyledTitle = styled(Text)`
+  font-size: 15px;
+`;
 
 const StyledButton = styled(Button)`
   width: 210px;
 
   &:hover ${StyledImage} {
+    background-color: var(--chakra-colors-gray-200);
+  }
+  &:hover ${StyledTitle} {
     background-color: var(--chakra-colors-gray-200);
   }
 `;
@@ -69,6 +75,7 @@ const StyledLink = styled(Link)`
 const SettingSidebar = () => {
   return (
     <SimpleGrid
+      boxShadow="inset -1px 0px 0px rgba(0, 0, 0, 0.25)"
       backgroundColor={"white"}
       gap={6}
       padding={3}
@@ -84,20 +91,27 @@ const SettingSidebar = () => {
         gap={7}
         paddingLeft={6}
       >
-        <Flex flexDirection={"column"} gap={3} backgroundColor={"white"}>
+        <Flex
+          flexDirection={"column"}
+          gap={2}
+          backgroundColor={"white"}
+          marginLeft={-6}
+        >
           <Text bg={"white"} fontWeight={600}>
             User Settings
           </Text>
-          <Flex
-            borderRadius={"8px"}
-            alignItems={"center"}
-            justifyContent={"left"}
+
+          <StyledButton
+            color={"white"}
+            gap={2}
+            bg={"#5964FF"}
+            width={"103%"}
+            display={"flex"}
+            justifyContent={"flex-start"}
           >
-            <StyledButton color={"white"} gap={2} bg={"#5964FF"} fontSize={18}>
-              <StyledImage src={myaccount} />
-              My Account
-            </StyledButton>
-          </Flex>
+            <StyledImage src={myaccount} />
+            <StyledTitle>My Account</StyledTitle>
+          </StyledButton>
         </Flex>
         <List spacing={2} bg={"white"}>
           <Text bg={"white"} fontWeight={600}>

@@ -1,19 +1,19 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import styled from "styled-components";
-import overview from "../Images/dashbord.svg";
+import subscription from "../../Images/subscription.svg";
 
 const StyledText = styled(Text)`
   background-color: white;
 `;
 const StyledImage = styled(Image)``;
 
-function Blocklist() {
+function Subscription() {
   return (
     <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Block List</StyledText>
-      <StyledImage src={overview} bg={"white"} />
+      <StyledText>Subscription</StyledText>
+      <StyledImage src={subscription} bg={"white"} />
     </Flex>
   );
 }
 
-export default Blocklist;
+export default Subscription;

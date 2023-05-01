@@ -9,7 +9,8 @@ const StyledFlex = styled(Flex)`
   border-right: 1px solid #d0d5dd;
   border-radius: 8px;
   width: 100%;
-  gap: 0.7px;
+  height: 1095.66663px;
+  gap: 1px;
 `;
 
 const StyledBox = styled(Box)`
@@ -21,11 +22,17 @@ const StyledBox = styled(Box)`
 const SettingSidebarLayout = () => {
   return (
     <StyledFlex bg={" #5964ff"}>
-      <Box>
+      <Box
+        w={"25%"}
+        bg={"white"}
+        borderRadius={"0 0 0 8px"}
+        boxShadow=" 0px 1px 0px rgba(0, 0, 0, 0.25),
+    inset -1px 0px 0px rgba(0, 0, 0, 0.25)"
+      >
         <SettingSidebar />
       </Box>
 
-      <StyledBox w={"10%"}>
+      <StyledBox bg={"white"}>
         <Outlet />
       </StyledBox>
     </StyledFlex>

@@ -1,19 +1,20 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import styled from "styled-components";
-import overview from "../Images/dashbord.svg";
+import payment from "../../Images/payment.svg";
 
 const StyledText = styled(Text)`
   background-color: white;
 `;
+
 const StyledImage = styled(Image)``;
 
-function Member() {
+const PaymentMethod = () => {
   return (
     <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Member</StyledText>
-      <StyledImage src={overview} bg={"white"} />
+      <StyledText>Payment Method</StyledText>
+      <StyledImage src={payment} bg={"white"} />
     </Flex>
   );
-}
+};
 
-export default Member;
+export default PaymentMethod;
