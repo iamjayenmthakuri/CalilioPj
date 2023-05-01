@@ -13,16 +13,34 @@ import Dashboard from "../Images/dashbord.svg";
 import Setting from "../Images/setting.svg";
 import sms from "../Images/sms.svg";
 import Contacts from "../Images/contacts.svg";
+import userPlus from "../Images/userplus.svg";
 
 const StyledText = styled(Text)`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #101828;
   background-color: white;
 `;
-const StyledImage = styled(Image)``;
+
+const StyledImage = styled(Image)`
+  size-adjust: 10px;
+`;
+
+const StyledButton = styled(Button)`
+  width: 210px;
+
+  &:hover ${StyledImage} {
+    background-color: var(--chakra-colors-gray-200);
+  }
+`;
 
 const StyledFlex = styled(Flex)`
   align-items: center;
-  gap: 10px;
-  background-color: #ba0c0c;
+  gap: 11px;
+  justify-content: flex-start;
+  background-color: #ffffff;
 
   padding: 4px;
   &:hover {
@@ -47,48 +65,104 @@ const SettingSidebar = () => {
   return (
     <SimpleGrid
       backgroundColor={"white"}
-      borderRadius={"8px"}
-      gap={7}
-      padding={2}
+      gap={6}
+      padding={3}
+      borderRadius={"8px 0 0 0"}
     >
-      <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-        <StyledText>Settings</StyledText>
-        <StyledImage src={Setting} bg={"white"} />
+      <Flex bg={"white"} gap={2} alignItems={"center"}>
+        <StyledText fontWeight={700}>Settings</StyledText>
+        <Image src={Setting} bg={"white"} />
       </Flex>
-      <Flex flexDirection={"column"} gap={3} backgroundColor={"white"}>
-        <StyledText>User Settings</StyledText>
-        <Button>My Account</Button>
-      </Flex>
-      <List>
-        <StyledText>WorkSpace</StyledText>
-        <ListItem>
-          <StyledFlex>
-            <Image src={Dashboard} background={"white"} />
-            <StyledLink to="overview">overview</StyledLink>
-          </StyledFlex>
-        </ListItem>
+      <SimpleGrid
+        placeItems={"left"}
+        backgroundColor={"white"}
+        gap={7}
+        paddingLeft={6}
+      >
+        <Flex flexDirection={"column"} gap={3} backgroundColor={"white"}>
+          <Text bg={"white"} fontWeight={600}>
+            User Settings
+          </Text>
+          <Flex
+            borderRadius={"8px"}
+            alignItems={"center"}
+            justifyContent={"left"}
+          >
+            <StyledButton color={"white"} gap={2} bg={"#5964FF"} fontSize={18}>
+              <StyledImage src={userPlus} />
+              My Account
+            </StyledButton>
+          </Flex>
+        </Flex>
+        <List spacing={2} bg={"white"}>
+          <Text bg={"white"} fontWeight={600}>
+            WorkSpace
+          </Text>
+          <ListItem>
+            <StyledFlex>
+              <Image src={Dashboard} background={"white"} />
+              <StyledLink to="overview">overview</StyledLink>
+            </StyledFlex>
+          </ListItem>
 
-        <ListItem>
-          <StyledFlex>
-            <Image src={Contacts} background={"white"} />
-            <StyledLink to="/contact">My Number</StyledLink>
-          </StyledFlex>
-        </ListItem>
+          <ListItem>
+            <StyledFlex>
+              <Image src={Contacts} background={"white"} />
+              <StyledLink to="mynumber">My Number</StyledLink>
+            </StyledFlex>
+          </ListItem>
 
-        <ListItem>
-          <StyledFlex>
-            <Image src={Setting} background={"white"} />
-            <StyledLink to="/setting">Member</StyledLink>
-          </StyledFlex>
-        </ListItem>
+          <ListItem>
+            <StyledFlex>
+              <Image src={Setting} background={"white"} />
+              <StyledLink to="member">Member</StyledLink>
+            </StyledFlex>
+          </ListItem>
 
-        <ListItem>
-          <StyledFlex>
-            <Image src={sms} background={"white"} />
-            <StyledLink to="/bulksms">Block List</StyledLink>
-          </StyledFlex>
-        </ListItem>
-      </List>
+          <ListItem>
+            <StyledFlex>
+              <Image src={sms} background={"white"} />
+              <StyledLink to="blocklist">Block List</StyledLink>
+            </StyledFlex>
+          </ListItem>
+        </List>
+        <List spacing={2} bg={"white"}>
+          <Text bg={"white"} fontWeight={600}>
+            Billing
+          </Text>
+          <ListItem>
+            <StyledFlex>
+              <Image src={Dashboard} background={"white"} />
+              <StyledLink to="overview">Subscription</StyledLink>
+            </StyledFlex>
+          </ListItem>
+
+          <ListItem>
+            <StyledFlex>
+              <Image src={Contacts} background={"white"} />
+              <StyledLink to="mynumber">Payment method</StyledLink>
+            </StyledFlex>
+          </ListItem>
+        </List>
+        <List spacing={2} bg={"white"}>
+          <Text bg={"white"} fontWeight={600}>
+            Application Setting
+          </Text>
+          <ListItem>
+            <StyledFlex>
+              <Image src={Dashboard} background={"white"} />
+              <StyledLink to="overview">Audio</StyledLink>
+            </StyledFlex>
+          </ListItem>
+
+          <ListItem>
+            <StyledFlex>
+              <Image src={Contacts} background={"white"} />
+              <StyledLink to="mynumber">Notification</StyledLink>
+            </StyledFlex>
+          </ListItem>
+        </List>
+      </SimpleGrid>
     </SimpleGrid>
   );
 };

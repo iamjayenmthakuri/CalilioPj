@@ -8,19 +8,24 @@ const StyledFlex = styled(Flex)`
   background: #ffffff;
   border-right: 1px solid #d0d5dd;
   border-radius: 8px;
+  width: 100%;
+  gap: 0.7px;
 `;
 
 const StyledBox = styled(Box)`
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
+  flex-grow: 1;
 `;
 
 const SettingSidebarLayout = () => {
   return (
-    <StyledFlex>
-      <SettingSidebar />
+    <StyledFlex bg={" #5964ff"}>
+      <Box>
+        <SettingSidebar />
+      </Box>
 
-      <StyledBox>
+      <StyledBox w={"10%"}>
         <Outlet />
       </StyledBox>
     </StyledFlex>
