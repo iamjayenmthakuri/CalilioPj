@@ -1,6 +1,7 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 import setting from "../Images/setting.svg";
+import SettingSidebar from "../SettingComponent/SettingSidebar";
 
 const StyledText = styled(Text)`
   font-style: normal;
@@ -21,6 +22,7 @@ function Setting() {
         <StyledText>Settings</StyledText>
         <StyledImage src={setting} bg={"white"} />
       </Flex>
+      <SettingSidebar />
     </>
   );
 }
